@@ -1,0 +1,19 @@
+[package]
+name = "my-file-host"
+version = "0.1.0"
+description = "Clean & Smart File Hosting App"
+
+[[module]]
+name = "php"
+source = "php/php"
+
+[fs]
+"/uploads" = "uploads"
+
+[[command]]
+name = "script"
+module = "php"
+runner = "https://webc.org/runners/wcgi"
+
+[command.annotations.wcgi]
+dialect = "rfc3875"
